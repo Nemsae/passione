@@ -10,6 +10,9 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+    /** for custom cursor */
+    ${'' /* cursor: none; */}
   }
 
   body.fontLoaded {
@@ -27,6 +30,17 @@ const GlobalStyle = createGlobalStyle`
     font-family: Georgia, Times, 'Times New Roman', serif;
     line-height: 1.5em;
   }
+
+  ${'' /* #cursor {
+    position:absolute;
+    width:40px;
+    height:40px;
+    background:#000;
+    border-radius:50%;
+    top:-40px;
+    left:-40px;
+    z-index:-2;
+  } */}
 `;
 
 export default GlobalStyle;
