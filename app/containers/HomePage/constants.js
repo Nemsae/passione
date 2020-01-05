@@ -10,3 +10,4 @@
  */
 
 export const CHANGE_USERNAME = 'boilerplate/Home/CHANGE_USERNAME';
+export const SET_WARNING_ACTIVE = 'boilerplate/Home/SET_WARNING_ACTIVE';

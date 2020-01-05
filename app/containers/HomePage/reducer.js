@@ -8,20 +8,27 @@
  */
 
 import produce from 'immer';
-import { CHANGE_USERNAME } from './constants';
+import { SET_WARNING_ACTIVE } from './constants';
+
+const WARNING_ACTIVE_DEFAULT = true;
 
 // The initial state of the App
 export const initialState = {
   username: '',
+  warningActive: WARNING_ACTIVE_DEFAULT,
 };
 
 /* eslint-disable default-case, no-param-reassign */
 const homeReducer = (state = initialState, action) =>
   produce(state, draft => {
     switch (action.type) {
-      case CHANGE_USERNAME:
+      // case CHANGE_USERNAME:
+      //   // Delete prefixed '@' from the github username
+      //   draft.username = action.username.replace(/@/gi, '');
+      //   break;
+      case SET_WARNING_ACTIVE:
         // Delete prefixed '@' from the github username
-        draft.username = action.username.replace(/@/gi, '');
+        draft.warningActive = action.payload;
         break;
     }
   });

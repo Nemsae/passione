@@ -15,7 +15,7 @@
  *    }
  */
 
-import { CHANGE_USERNAME } from './constants';
+import { CHANGE_USERNAME, SET_WARNING_ACTIVE } from './constants';
 
 /**
  * Changes the input field of the form
@@ -28,5 +28,19 @@ export function changeUsername(username) {
   return {
     type: CHANGE_USERNAME,
     username,
+  };
+}
+
+/**
+ * Whether to show the warning message or not
+ *
+ * @param  {boolean} active
+ *
+ * @return {object} An action object with a type of SET_WARNING_ACTIVE
+ */
+export function setWarningActive(active) {
+  return {
+    type: SET_WARNING_ACTIVE,
+    payload: active,
   };
 }

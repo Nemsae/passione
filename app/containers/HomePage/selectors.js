@@ -13,4 +13,9 @@ const makeSelectUsername = () =>
     homeState => homeState.username,
   );
 
-export { selectHome, makeSelectUsername };
+const selectWarningActive = createSelector(
+  selectHome,
+  homeState => homeState.warningActive,
+);
+
+export { selectHome, selectWarningActive, makeSelectUsername };

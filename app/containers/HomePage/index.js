@@ -24,8 +24,8 @@ import greta1 from 'images/greta1.jpg';
 import H1Hero from 'components/H1Hero';
 // import messages from './messages';
 import { loadRepos } from '../App/actions';
-import { changeUsername } from './actions';
-import { makeSelectUsername } from './selectors';
+// import { changeUsername } from './actions';
+// import { makeSelectUsername } from './selectors';
 import reducer from './reducer';
 import saga from './saga';
 
@@ -38,14 +38,22 @@ import Section from './Section';
 import WarningClose from './WarningClose';
 import WarningContainer from './WarningContainer';
 
+import { setWarningActive } from './actions';
+import { selectWarningActive } from './selectors';
+
 const key = 'home';
 
-export function HomePage({ username, loading, error, onSubmitForm }) {
+export function HomePage({
+  warningActive,
+  setWarningActive,
+  error,
+  onSubmitForm,
+}) {
   useInjectReducer({ key, reducer });
   useInjectSaga({ key, saga });
 
   const [heroImageActive, setHeroBGImageActive] = useState(false);
-  const [warningActive, setWarningActive] = useState(true);
+  // const [warningActive, setWarningActive] = useState(true);
 
   // useEffect(() => {
   //   // When initial state username is not null, submit the form to load repos
@@ -105,19 +113,23 @@ HomePage.propTypes = {
   repos: PropTypes.oneOfType([PropTypes.array, PropTypes.bool]),
   onSubmitForm: PropTypes.func,
   username: PropTypes.string,
-  onChangeUsername: PropTypes.func,
+  warningActive: PropTypes.bool,
+  setWarningActive: PropTypes.func,
+  // onChangeUsername: PropTypes.func,
 };
 
 const mapStateToProps = createStructuredSelector({
   repos: makeSelectRepos(),
-  username: makeSelectUsername(),
+  // username: makeSelectUsername(),
   loading: makeSelectLoading(),
   error: makeSelectError(),
+  warningActive: selectWarningActive,
 });
 
 export function mapDispatchToProps(dispatch) {
   return {
-    onChangeUsername: evt => dispatch(changeUsername(evt.target.value)),
+    // onChangeUsername: evt => dispatch(changeUsername(evt.target.value)),
+    setWarningActive: active => dispatch(setWarningActive(active)),
     onSubmitForm: evt => {
       if (evt !== undefined && evt.preventDefault) evt.preventDefault();
       dispatch(loadRepos());
