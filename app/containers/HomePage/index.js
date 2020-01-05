@@ -4,7 +4,7 @@
  * This is the first thing users see of our App, at the '/' route
  */
 
-import React, { useEffect, memo } from 'react';
+import React, { Fragment, useState, useEffect, memo } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
@@ -20,6 +20,7 @@ import {
   makeSelectLoading,
   makeSelectError,
 } from 'containers/App/selectors';
+import greta1 from 'images/greta1.jpg';
 import H1Hero from 'components/H1Hero';
 // import messages from './messages';
 import { loadRepos } from '../App/actions';
@@ -31,8 +32,10 @@ import saga from './saga';
 //  ./components
 import HeroButton from './HeroButton';
 import HeroContainer from './HeroContainer';
+import HeroBGImage from './HeroBGImage';
 import HeroMessageContainer from './HeroMessageContainer';
 import Section from './Section';
+import WarningClose from './WarningClose';
 import WarningContainer from './WarningContainer';
 
 const key = 'home';
@@ -40,6 +43,9 @@ const key = 'home';
 export function HomePage({ username, loading, error, onSubmitForm }) {
   useInjectReducer({ key, reducer });
   useInjectSaga({ key, saga });
+
+  const [heroImageActive, setHeroBGImageActive] = useState(false);
+  const [warningActive, setWarningActive] = useState(true);
 
   // useEffect(() => {
   //   // When initial state username is not null, submit the form to load repos
@@ -52,26 +58,44 @@ export function HomePage({ username, loading, error, onSubmitForm }) {
   //   repos,
   // };
 
+  const heroImageClsName = heroImageActive ? 'active' : 'inactive';
+  // const warningClsName = heroImageActive ? 'inactive' : 'active';
+  const buttonClsName = heroImageActive ? 'active' : 'inactive';
+
   return (
-    <HeroContainer className="white">
+    <Fragment>
       <Helmet>
         <title>We are Passione</title>
         <meta name="We are Passione" content="The Vision of Passione" />
       </Helmet>
-      <WarningContainer>
-        <p>WARNING: This product contains passione.</p>
-        <p>Passione is an addictive chemical.</p>
-      </WarningContainer>
-      <Section>
-        <HeroMessageContainer>
-          <HeroButton as={Link} to="/fam">
-            <H1Hero className="--invert" data-text="Passione">
-              Passione
-            </H1Hero>
-          </HeroButton>
-        </HeroMessageContainer>
-      </Section>
-    </HeroContainer>
+      <HeroContainer className="white">
+        <HeroBGImage src={greta1} alt="bunny" className={heroImageClsName} />
+        {warningActive && (
+          <WarningContainer>
+            <p>WARNING: This product contains passione.</p>
+            <p>Passione is an addictive chemical.</p>
+            <WarningClose onClick={() => setWarningActive(false)} />
+          </WarningContainer>
+        )}
+        <Section>
+          <HeroMessageContainer>
+            <HeroButton
+              // as={Link}
+              // to="/fam"
+              className={buttonClsName}
+              onMouseEnter={() => setHeroBGImageActive(true)}
+              onFocus={() => setHeroBGImageActive(true)}
+              onClick={() => setHeroBGImageActive(true)}
+              onMouseLeave={() => setHeroBGImageActive(false)}
+            >
+              <H1Hero className="--invert" data-text="Passione">
+                Passione
+              </H1Hero>
+            </HeroButton>
+          </HeroMessageContainer>
+        </Section>
+      </HeroContainer>
+    </Fragment>
   );
 }
 

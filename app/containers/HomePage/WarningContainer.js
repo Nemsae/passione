@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import cssVars from '../../cssVariables';
+
 const WarningContainer = styled.section.attrs({
   className: 'warning__container',
 })`
@@ -13,7 +15,7 @@ const WarningContainer = styled.section.attrs({
   padding: 20px;
   text-align: center;
   width: 100%;
-  z-index: 1010;
+  z-index: calc(${cssVars.HEADER_Z_INDEX} + 1);
 
   display: flex;
   flex-direction: column;
@@ -32,9 +34,18 @@ const WarningContainer = styled.section.attrs({
     line-height: 1.11;
   }
 
-    text-transform: none;
-    letter-spacing: 0;
-    
+  opacity: 1;
+
+  transition: all 800ms ease-in-out;
+
+  &.inactive {
+    opacity: 0;
+  }
+
+  @media only screen and (max-width: 600px) {
+    p {
+      font-size: 22px;
+    }
   }
 `;
 

@@ -13,10 +13,11 @@ import { Switch, Route } from 'react-router-dom';
 import Cursor from 'containers/Cursor';
 
 import HomePage from 'containers/HomePage/Loadable';
-import FeaturePage from 'containers/FeaturePage/Loadable';
+import ChatPage from 'containers/ChatPage/Loadable';
+// import FeaturePage from 'containers/FeaturePage/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 import Header from 'components/Header';
-import Footer from 'components/Footer';
+// import Footer from 'components/Footer';
 
 import GlobalStyle from '../../global-styles';
 
@@ -36,10 +37,10 @@ export default function App() {
       <Helmet titleTemplate="Passione" defaultTitle="Passione">
         <meta name="description" content="Passione - " />
       </Helmet>
-      {/* <Header /> */}
+      <Header />
       <Switch>
         <Route exact path="/" component={HomePage} />
-        {/* <Route path="/features" component={FeaturePage} /> */}
+        <Route path="/fam" component={ChatPage} />
         <Route path="" component={NotFoundPage} />
       </Switch>
       {/* <Footer /> */}

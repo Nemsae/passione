@@ -33,6 +33,8 @@ const H1Hero = styled(H1).attrs({ className: 'h1 h1--hero' })`
     background: #000;
     clip-path: circle(20px at var(--x, -40px) var(--y, -40px));
   }
+
+  transition: all 800ms ease-in-out;
 `;
 
 export default H1Hero;
