@@ -8,7 +8,6 @@
 
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import styled from 'styled-components';
 import { Switch, Route } from 'react-router-dom';
 import Cursor from 'containers/Cursor';
 
@@ -19,17 +18,9 @@ import NotFoundPage from 'containers/NotFoundPage/Loadable';
 import Header from 'components/Header';
 // import Footer from 'components/Footer';
 
+import AppWrapper from './AppWrapper';
+
 import GlobalStyle from '../../global-styles';
-
-const AppWrapper = styled.div`
-  margin: 0 auto;
-  min-height: 100%;
-
-  display: grid;
-  /* grid-template-rows: 0 1fr; */
-  grid-template-rows: 100%;
-  grid-template-columns: 100%;
-`;
 
 export default function App() {
   return (

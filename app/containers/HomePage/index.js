@@ -25,6 +25,7 @@ import greta1 from 'images/greta1.jpg';
 //  components
 import H1Hero from 'components/H1Hero';
 import FullPageContainer from 'components/FullPageContainer';
+import TextTrailEffect from 'components/TextTrailEffect';
 // import messages from './messages';
 // import { changeUsername } from './actions';
 // import { makeSelectUsername } from './selectors';
@@ -37,6 +38,7 @@ import saga from './saga';
 //  ./components
 import HeroButton from './HeroButton';
 import HeroContainer from './HeroContainer';
+import HeroContainerPassion from './HeroContainerPassion';
 import HeroBGImage from './HeroBGImage';
 import HeroMessageContainer from './HeroMessageContainer';
 import Section from './Section';
@@ -81,7 +83,7 @@ export function HomePage({
         <title>We are Passione</title>
         <meta name="We are Passione" content="The Vision of Passione" />
       </Helmet>
-      <HeroContainer className="white">
+      {/* <HeroContainer className="white">
         <HeroBGImage src={greta1} alt="bunny" className={heroImageClsName} />
         {warningActive && (
           <WarningContainer>
@@ -107,10 +109,30 @@ export function HomePage({
             </HeroButton>
           </HeroMessageContainer>
         </Section>
-      </HeroContainer>
-      <FullPageContainer>
-        Greta
+      </HeroContainer> */}
+      <FullPageContainer className="center">
+        <HeroContainerPassion>
+          <div className="word__container">
+            <h1 className="word">pas·sion</h1>
+            <h2 className="phonetics">/ˈpaSHən/</h2>
+          </div>
+          <div className="definition__container">
+            <p className="label">noun</p>
+            <p className="definition">
+              1. any powerful or compelling emotion or feeling, as{' '}
+              <span className="quote__image">love</span> or{' '}
+              <span className="quote__image">hate</span>.
+            </p>
+          </div>
+        </HeroContainerPassion>
       </FullPageContainer>
+      <FullPageContainer>
+        <TextTrailEffect
+          text="Bunny"
+        />
+      </FullPageContainer>
+      <FullPageContainer>Ethan</FullPageContainer>
+      <FullPageContainer>Jam</FullPageContainer>
     </Fragment>
   );
 }

@@ -11,6 +11,11 @@ const FullPageContainer = styled.article`
   height: 100vh;
 
   /* background-image: url(${greta1}); */
+  &.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 `;
 
 export default FullPageContainer;
