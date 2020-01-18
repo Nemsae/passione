@@ -35,10 +35,12 @@ const HeroButton = styled.button`
     /* background-color: ${rgba(cssVars.CLR_THE_SPEED_OF_LIGHT, 0.8)}; */
     background: linear-gradient(
       to bottom,
-      ${rgba(cssVars.CLR_THE_SPEED_OF_LIGHT, 0.8)} 0%,
-      ${cssVars.CLR_WHITE} 40%,
-      ${cssVars.CLR_WHITE} 60%,
-      ${rgba(cssVars.CLR_THE_SPEED_OF_LIGHT, 0.8)} 100%
+      ${rgba(cssVars.CLR_WHITE, 0.6)} 0%,
+      ${rgba(cssVars.CLR_WHITE, 0.75)} 10%,
+      ${rgba(cssVars.CLR_THE_SPEED_OF_LIGHT, 0.75)} 40%,
+      ${rgba(cssVars.CLR_THE_SPEED_OF_LIGHT, 0.75)} 60%,
+      ${rgba(cssVars.CLR_WHITE, 0.75)} 90%,
+      ${rgba(cssVars.CLR_WHITE, 0.6)} 100%
     );
 
     ${H1Hero} {

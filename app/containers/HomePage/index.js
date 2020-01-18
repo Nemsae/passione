@@ -21,11 +21,16 @@ import {
   makeSelectError,
 } from 'containers/App/selectors';
 import greta1 from 'images/greta1.jpg';
+
+//  components
 import H1Hero from 'components/H1Hero';
+import FullPageContainer from 'components/FullPageContainer';
 // import messages from './messages';
-import { loadRepos } from '../App/actions';
 // import { changeUsername } from './actions';
 // import { makeSelectUsername } from './selectors';
+
+//  side effects
+import { loadRepos } from '../App/actions';
 import reducer from './reducer';
 import saga from './saga';
 
@@ -103,6 +108,9 @@ export function HomePage({
           </HeroMessageContainer>
         </Section>
       </HeroContainer>
+      <FullPageContainer>
+        Greta
+      </FullPageContainer>
     </Fragment>
   );
 }
