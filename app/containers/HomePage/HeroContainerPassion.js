@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import { rgba } from 'polished';
 
+import cssVars from '../../cssVariables';
+
 const HeroContainerPassion = styled.section.attrs({
   className: 'hero-container hero-container--passion',
 })`
@@ -14,13 +16,15 @@ const HeroContainerPassion = styled.section.attrs({
     margin: 0;
 
     font-size: 2.4rem;
-    font-family: 'Libre Caslon Text', serif;
+    font-family: ${cssVars.FONT_FAMILY_BODY};
     color: #4A4A4A;
   }
   h2 {
     font-weight: normal;
     font-size: 1.8rem;
     color: ${rgba('#70757A', 0.8)};
+
+    margin-top: 0.25em;
   }
   p.definition {
     font-size: 2rem;

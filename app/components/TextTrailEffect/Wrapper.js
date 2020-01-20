@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 
-const Wrapper = styled.div`
+import CoDrops from './CoDrops';
+
+const Wrapper = styled(CoDrops).attrs({
+  className: 'text-trail__wrapper',
+})`
   padding: 0;
   margin: 0;
   width: 100%;

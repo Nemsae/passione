@@ -1,0 +1,48 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
+
+// import greta1 from 'images/greta1.jpg';
+import greta3 from 'images/greta3.jpg';
+import john1 from 'images/john1.jpg';
+import jahan3 from 'images/jahan3.jpg';
+import ethan1 from 'images/ethan1.jpg';
+
+const getImageURL = dataKey => {
+  let backgroundURL;
+  switch (dataKey) {
+    case 'bunny':
+      backgroundURL = greta3;
+      break;
+    case 'jean':
+      backgroundURL = john1;
+      break;
+    case 'jahan':
+      backgroundURL = jahan3;
+      break;
+    case 'ethan':
+      backgroundURL = ethan1;
+      break;
+    default:
+      break;
+  }
+
+  return backgroundURL;
+};
+
+export const HeroImage = ({ dataKey, children, ...restProps }) => {
+  const imageURL = getImageURL(dataKey);
+
+  const HeroImagePrimitive = styled.div`
+    background-image: url(${imageURL});
+  `;
+
+  return <HeroImagePrimitive {...restProps}>{children}</HeroImagePrimitive>;
+};
+
+HeroImage.propTypes = {
+  dataKey: PropTypes.string.isRequired,
+  children: PropTypes.any,
+};
+
+export default HeroImage;

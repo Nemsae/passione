@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import cssVars from '../../cssVariables';
+
 import H1 from 'components/H1';
 
 const H1Hero = styled(H1).attrs({ className: 'h1 h1--hero' })`
@@ -8,7 +10,8 @@ const H1Hero = styled(H1).attrs({ className: 'h1 h1--hero' })`
   color: #ffffff;
 
   font-size: 2em;
-  font-family: 'Baskervville', serif;
+  font-family: ${cssVars.FONT_FAMILY_BODY};
+  
   font-weight: normal;
   text-transform: uppercase;
   letter-spacing: 5px;
@@ -26,13 +29,13 @@ const H1Hero = styled(H1).attrs({ className: 'h1 h1--hero' })`
   color:transparent;
   -webkit-text-fill-color: transparent; */
 
-  &:before {
+  /* &:before {
     position: absolute;
     content: attr(data-text);
     color: #fff;
     background: #000;
     clip-path: circle(20px at var(--x, -40px) var(--y, -40px));
-  }
+  } */
 
   transition: all 800ms ease-in-out;
 `;

@@ -25,6 +25,7 @@ import greta1 from 'images/greta1.jpg';
 //  components
 import H1Hero from 'components/H1Hero';
 import FullPageContainer from 'components/FullPageContainer';
+import ScrollDown from 'components/ScrollDown';
 import TextTrailEffect from 'components/TextTrailEffect';
 // import messages from './messages';
 // import { changeUsername } from './actions';
@@ -49,6 +50,33 @@ import { setWarningActive } from './actions';
 import { selectWarningActive } from './selectors';
 
 const key = 'home';
+const dataTextTrail = [
+  {
+    id: 'bunny',
+    name: 'Bunny',
+    text: 'Bunny',
+  },
+  {
+    id: 'jean',
+    name: 'Jean',
+    text: 'Jean',
+  },
+  {
+    id: 'jahan',
+    name: 'Jahan',
+    text: 'Jahan',
+  },
+  {
+    id: 'ethan',
+    name: 'Ethan',
+    text: 'Ethan',
+  },
+  // {
+  //   id: 'shogun',
+  //   name: 'Shogun',
+  //   text: 'Shogun',
+  // },
+];
 
 export function HomePage({
   warningActive,
@@ -83,8 +111,8 @@ export function HomePage({
         <title>We are Passione</title>
         <meta name="We are Passione" content="The Vision of Passione" />
       </Helmet>
-      {/* <HeroContainer className="white">
-        <HeroBGImage src={greta1} alt="bunny" className={heroImageClsName} />
+      <HeroContainer className="white">
+        <HeroBGImage className={heroImageClsName} />
         {warningActive && (
           <WarningContainer>
             <p>WARNING: This product contains passione.</p>
@@ -109,7 +137,7 @@ export function HomePage({
             </HeroButton>
           </HeroMessageContainer>
         </Section>
-      </HeroContainer> */}
+      </HeroContainer>
       <FullPageContainer className="center">
         <HeroContainerPassion>
           <div className="word__container">
@@ -125,14 +153,11 @@ export function HomePage({
             </p>
           </div>
         </HeroContainerPassion>
+        <ScrollDown>😘</ScrollDown>
       </FullPageContainer>
-      <FullPageContainer>
-        <TextTrailEffect
-          text="Bunny"
-        />
+      <FullPageContainer className="center">
+        <TextTrailEffect data={dataTextTrail} />
       </FullPageContainer>
-      <FullPageContainer>Ethan</FullPageContainer>
-      <FullPageContainer>Jam</FullPageContainer>
     </Fragment>
   );
 }

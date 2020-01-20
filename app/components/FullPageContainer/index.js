@@ -10,9 +10,9 @@ const FullPageContainer = styled.article`
   width: 100vw;
   height: 100vh;
 
-  /* background-image: url(${greta1}); */
   &.center {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
   }

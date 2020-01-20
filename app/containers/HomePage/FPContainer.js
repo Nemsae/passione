@@ -12,10 +12,6 @@ const FPContainer = styled.article`
 
   width: 100vw;
   height: 100vh;
-
-  /* background: ${cssVars.CLR_BLACK};
-
-  /* background-image: url(${greta1}); */
 `;
 
 export default FPContainer;

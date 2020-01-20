@@ -28,6 +28,28 @@ export default {
   CLR_PRIMARY: colors.babys_booties,
   CLR_SECONDARY: colors.cookies_and_cream,
   CLR_TERTIARY: colors.deep_koamaru,
+  //  band member colors
+  CLR_BUNNY: '#f4d9dc',
+
   //  header
   HEADER_Z_INDEX: 999,
+
+  //  font
+  FONT_FAMILY_DISPLAY: `'Montserrat', sans-serif`,
+  FONT_FAMILY_DISPLAY_ALT: `'Montserrat Subrayada', sans-serif`,
+  FONT_FAMILY_BODY: `'Libre Caslon Text', serif`,
+  FONT_WEIGHT_DISPLAY: 700,
+  FONT_WEIGHT_DISPLAY_ALT: 700,
+  //  codrops slides
+  FONT_TRAIL_WEIGHT: 900,
+  FONT_TRAIL_SIZE: '16vh',
+  FONT_TRAIL_LHEIGHT: 0.75,
+
+  //  codrops slides
+  COLOR_TEXT: '#ff00c4',
+  COLOR_BG: '#1c1423',
+  COLOR_LINK: '#59545e',
+  COLOR_LINK_HOVER: '#fff',
+  COLOR_SLIDE_TEXT: '#fff',
+  COLOR_NAV: '#1c1423',
 };
