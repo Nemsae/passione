@@ -1,5 +1,7 @@
 import { css } from 'styled-components';
 
+import cssVars from '../../cssVariables';
+
 const buttonStyles = css`
   display: inline-block;
   box-sizing: border-box;
@@ -19,7 +21,7 @@ const buttonStyles = css`
 
   &:active {
     background: #41addd;
-    color: #fff;
+    color: ${cssVars.CLR_WHITE};
   }
 `;
 

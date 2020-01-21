@@ -16,6 +16,10 @@ const FullPageContainer = styled.article`
     align-items: center;
     justify-content: center;
   }
+
+  &.white {
+    background-color: ${cssVars.CLR_WHITE};
+  }
 `;
 
 export default FullPageContainer;

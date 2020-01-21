@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import cssVars from '../../cssVariables';
+
 const Button = styled.button`
   display: inline-block;
 
@@ -21,7 +23,7 @@ const Button = styled.button`
   margin: 0;
   text-decoration: none;
   background: #0069ed;
-  color: #ffffff;
+  color: ${cssVars.CLR_WHITE};
   font-family: sans-serif;
   font-size: 16px;
   cursor: pointer;
@@ -36,7 +38,7 @@ const Button = styled.button`
   }
 
   &:focus {
-    outline: 1px solid #fff;
+    outline: 1px solid ${cssVars.CLR_WHITE};
     outline-offset: -4px;
   }
 

@@ -16,6 +16,7 @@ const HeroContainerPassion = styled.section.attrs({
     margin: 0;
 
     font-size: 2.4rem;
+    line-height: 1.75;
     font-family: ${cssVars.FONT_FAMILY_BODY};
     color: #4A4A4A;
   }
@@ -24,7 +25,7 @@ const HeroContainerPassion = styled.section.attrs({
     font-size: 1.8rem;
     color: ${rgba('#70757A', 0.8)};
 
-    margin-top: 0.25em;
+    margin-top: 0.5em;
   }
   p.definition {
     font-size: 2rem;
@@ -61,6 +62,16 @@ const HeroContainerPassion = styled.section.attrs({
       @media screen and (min-width: 53em) {
         top: calc(100% - 1vh);
       }
+    }
+  }
+
+  &.white {
+    h1,
+    p {
+      color: ${cssVars.CLR_WHITE};
+    }
+    h2 {
+      color: ${rgba('#70757A', 0.98)};
     }
   }
 

@@ -1,22 +1,21 @@
 import styled from 'styled-components';
 
-import cssVars from '../../cssVariables';
-
 import H1 from 'components/H1';
+
+import cssVars from '../../cssVariables';
 
 const H1Hero = styled(H1).attrs({ className: 'h1 h1--hero' })`
   margin: 0;
-
-  color: #ffffff;
 
   font-size: 2em;
   font-family: ${cssVars.FONT_FAMILY_BODY};
   
   font-weight: normal;
   text-transform: uppercase;
-  letter-spacing: 5px;
+  letter-spacing: 6px;
 
   color: #000;
+  color: ${cssVars.CLR_WHITE};
   display: inline-block;
   text-align: center;
   position: relative;
@@ -32,9 +31,22 @@ const H1Hero = styled(H1).attrs({ className: 'h1 h1--hero' })`
   /* &:before {
     position: absolute;
     content: attr(data-text);
-    color: #fff;
+    color: ${cssVars.CLR_WHITE};
     background: #000;
     clip-path: circle(20px at var(--x, -40px) var(--y, -40px));
+  } */
+
+  /* sup.exponent {
+    font-size: 0.54em;
+
+    transition: all 800ms ease-in-out;
+  }
+
+  &:hover {
+    sup.exponent {
+      vertical-align: initial;
+      font-size: 1em;
+    }
   } */
 
   transition: all 800ms ease-in-out;

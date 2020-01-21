@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import HeroButton from './HeroButton';
+
 import cssVars from '../../cssVariables';
 
 const WarningContainer = styled.section.attrs({
@@ -11,11 +13,11 @@ const WarningContainer = styled.section.attrs({
   transform: translateX(-50%);
 
   width: 100%;
-  min-height: 20vh;
+  min-height: 100vh;
   padding: 20px;
   text-align: center;
   width: 100%;
-  z-index: calc(${cssVars.HEADER_Z_INDEX} + 1);
+  z-index: calc(${cssVars.HEADER_Z_INDEX} + 999);
 
   display: flex;
   flex-direction: column;
@@ -27,11 +29,16 @@ const WarningContainer = styled.section.attrs({
   p {
     margin: 0;
 
-    color: #fff;
+    color: ${cssVars.CLR_WHITE};
     font-family: Arial;
     font-weight: 700;
     font-size: 34px;
     line-height: 1.11;
+  }
+
+  ${HeroButton} {
+    position: absolute;
+    bottom: 4rem;
   }
 
   opacity: 1;
@@ -42,10 +49,8 @@ const WarningContainer = styled.section.attrs({
     opacity: 0;
   }
 
-  @media only screen and (max-width: 600px) {
-    p {
-      font-size: 22px;
-    }
+  @media screen and (min-width: 53em) {
+    
   }
 `;
 

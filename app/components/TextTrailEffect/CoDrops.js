@@ -135,18 +135,24 @@ const CoDrops = styled.div.attrs({
     color: transparent;
   }
 
-  .content__nav {
+  .content__nav {    
     grid-area: main;
-    /* width: 80%;
-    max-width: 900px; */
+    width: 100%;
+    max-width: 1200px;
 
     height: auto;
     display: flex;
     align-items: flex-end;
     justify-content: center;
     font-size: 1.25rem;
-    position: relative;
+    /* position: relative;
+    z-index: 1; */
+
+    position: absolute;
     z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
     .content__nav-button + .content__nav-button {
       margin-left: 1rem;
@@ -164,6 +170,18 @@ const CoDrops = styled.div.attrs({
     font-weight: 900;
     font-family: ${cssVars.FONT_FAMILY_DISPLAY};
     line-height: 1;
+
+    img.left-arrow
+    img.right-arrow {
+      cursor: pointer;
+    }
+    img.left-arrow {
+      max-width: 150px;
+    }
+    img.right-arrow {
+      max-width: 125px;
+      margin-right: 25px;
+    }
   }
 
   .content__nav-button:focus {

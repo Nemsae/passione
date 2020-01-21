@@ -1,7 +1,11 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 
+
+//  images/icons
 // import greta1 from '../../images/greta1.JPG';
+import leftArrow from '../../images/left_arrow.png';
+import rightArrow from '../../images/right_arrow.png';
 
 //  !
 import { initialize } from './demo1';
@@ -89,13 +93,13 @@ function TextTrailEffect({ data, ...restProps }) {
           type="button"
           className="content__nav-button content__nav-button--prev"
         >
-          Prev
+          <img className="left-arrow" src={leftArrow} alt="prev" />
         </button>
         <button
           type="button"
           className="content__nav-button content__nav-button--next"
         >
-          Next
+          <img className="right-arrow" src={rightArrow} alt="next" />
         </button>
       </nav>
     </CoDrops>

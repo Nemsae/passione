@@ -21,6 +21,10 @@ const ScrollDown = styled.button`
   cursor: pointer;
   -webkit-appearance: none;
   -moz-appearance: none;
+
+  .icon--image {
+    max-height: 100px;
+  }
 `;
 
 export default ScrollDown;

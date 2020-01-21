@@ -13,13 +13,13 @@ const HeroContainer = styled.article`
   width: 100vw;
   height: 100vh;
 
-  background: ${cssVars.CLR_BLACK};
+  /* background: ${cssVars.CLR_BLACK}; */
 
   display: flex;
   flex-direction: column;
 
   &.white {
-    background: #fff;
+    background: ${cssVars.CLR_WHITE};
     color: #000;
 
     /* ${HeroMessageContainer} {
@@ -31,7 +31,7 @@ const HeroContainer = styled.article`
     } */
   }
 
-  background-image: url(${greta1});
+  /* background-image: url(${greta1}); */
 `;
 
 export default HeroContainer;

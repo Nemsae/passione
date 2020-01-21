@@ -2,7 +2,7 @@
 
 const colors = {
   black: '#000000',
-  white: '#ffffff',
+  white: '#fafafa',
   cookies_and_cream: '#EDDEB1',
   pacific_sand: '#F3EBCC',
   the_speed_of_light: '#F8F4F0',
@@ -31,6 +31,8 @@ export default {
   //  band member colors
   CLR_BUNNY: '#f4d9dc',
 
+  CLR_APP_BG: '#131210',
+
   //  header
   HEADER_Z_INDEX: 999,
 
@@ -38,6 +40,7 @@ export default {
   FONT_FAMILY_DISPLAY: `'Montserrat', sans-serif`,
   FONT_FAMILY_DISPLAY_ALT: `'Montserrat Subrayada', sans-serif`,
   FONT_FAMILY_BODY: `'Libre Caslon Text', serif`,
+  FONT_WEIGHT_REGULAR: 500,
   FONT_WEIGHT_DISPLAY: 700,
   FONT_WEIGHT_DISPLAY_ALT: 700,
   //  codrops slides
@@ -49,7 +52,7 @@ export default {
   COLOR_TEXT: '#ff00c4',
   COLOR_BG: '#1c1423',
   COLOR_LINK: '#59545e',
-  COLOR_LINK_HOVER: '#fff',
-  COLOR_SLIDE_TEXT: '#fff',
+  COLOR_LINK_HOVER: colors.white,
+  COLOR_SLIDE_TEXT: colors.white,
   COLOR_NAV: '#1c1423',
 };

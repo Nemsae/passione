@@ -12,6 +12,7 @@ import { FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
 import { createStructuredSelector } from 'reselect';
+import classNames from 'classnames';
 
 import { useInjectReducer } from 'utils/injectReducer';
 import { useInjectSaga } from 'utils/injectSaga';
@@ -22,11 +23,15 @@ import {
 } from 'containers/App/selectors';
 import greta1 from 'images/greta1.jpg';
 
+//  images/icons
+
 //  components
+import H1 from 'components/H1';
 import H1Hero from 'components/H1Hero';
 import FullPageContainer from 'components/FullPageContainer';
 import ScrollDown from 'components/ScrollDown';
 import TextTrailEffect from 'components/TextTrailEffect';
+import downArrowBlack from '../../images/down_arrow_black.png';
 // import messages from './messages';
 // import { changeUsername } from './actions';
 // import { makeSelectUsername } from './selectors';
@@ -62,9 +67,9 @@ const dataTextTrail = [
     text: 'Jean',
   },
   {
-    id: 'jahan',
-    name: 'Jahan',
-    text: 'Jahan',
+    id: 'noct',
+    name: 'Noct',
+    text: 'Noct',
   },
   {
     id: 'ethan',
@@ -103,7 +108,11 @@ export function HomePage({
 
   const heroImageClsName = heroImageActive ? 'active' : 'inactive';
   // const warningClsName = heroImageActive ? 'inactive' : 'active';
-  const buttonClsName = heroImageActive ? 'active' : 'inactive';
+  // const buttonClsName = heroImageActive ? 'active' : 'inactive';
+  const buttonClsName = classNames('white', {
+    active: heroImageActive,
+    inactive: heroImageActive,
+  });
 
   return (
     <Fragment>
@@ -111,16 +120,24 @@ export function HomePage({
         <title>We are Passione</title>
         <meta name="We are Passione" content="The Vision of Passione" />
       </Helmet>
-      <HeroContainer className="white">
-        <HeroBGImage className={heroImageClsName} />
+      <HeroContainer>
+        {/* <HeroBGImage className={heroImageClsName} /> */}
         {warningActive && (
           <WarningContainer>
-            <p>WARNING: This product contains passione.</p>
-            <p>Passione is an addictive chemical.</p>
+            <p>
+              WARNING: This product contains passione. Passione is an addictive
+              chemical.
+            </p>
             <WarningClose onClick={() => setWarningActive(false)} />
+            <HeroButton
+              className={buttonClsName}
+              onClick={() => setWarningActive(false)}
+            >
+              <H1>I understand</H1>
+            </HeroButton>
           </WarningContainer>
         )}
-        <Section>
+        {/* <Section>
           <HeroMessageContainer>
             <HeroButton
               // as={Link}
@@ -136,12 +153,41 @@ export function HomePage({
               </H1Hero>
             </HeroButton>
           </HeroMessageContainer>
+        </Section> */}
+        <Section>
+          <HeroMessageContainer>
+            <HeroButton
+              // as={Link}
+              // to="/fam"
+              className={buttonClsName}
+              // onMouseEnter={() => setHeroBGImageActive(true)}
+              // onFocus={() => setHeroBGImageActive(true)}
+              // onClick={() => setHeroBGImageActive(true)}
+              // onMouseLeave={() => setHeroBGImageActive(false)}
+            >
+              {/* <H1Hero>
+                Passio<sup className="exponent">n</sup>e
+              </H1Hero> */}
+              <H1Hero>Passione</H1Hero>
+            </HeroButton>
+          </HeroMessageContainer>
         </Section>
+        <ScrollDown>
+          <img
+            className="icon icon--image"
+            src={downArrowBlack}
+            alt="scroll down"
+          />
+        </ScrollDown>
       </HeroContainer>
-      <FullPageContainer className="center">
-        <HeroContainerPassion>
+      <FullPageContainer id="section-passion-def" className="center">
+        <HeroContainerPassion className="white">
           <div className="word__container">
-            <h1 className="word">pas·sion</h1>
+            {/* <div className="word__scroller">
+              <h1 className="word word--current">pas·sion</h1>
+              <h1 className="word">열정</h1>
+            </div> */}
+            <h1 className="word word--current">pas·sion</h1>
             <h2 className="phonetics">/ˈpaSHən/</h2>
           </div>
           <div className="definition__container">
@@ -153,10 +199,33 @@ export function HomePage({
             </p>
           </div>
         </HeroContainerPassion>
-        <ScrollDown>😘</ScrollDown>
+        <ScrollDown>
+          <img
+            className="icon icon--image"
+            src={downArrowBlack}
+            alt="scroll down"
+          />
+        </ScrollDown>
       </FullPageContainer>
-      <FullPageContainer className="center">
+      <FullPageContainer id="section-passione-members" className="center white">
         <TextTrailEffect data={dataTextTrail} />
+        <ScrollDown>
+          <img
+            className="icon icon--image"
+            src={downArrowBlack}
+            alt="scroll down"
+          />
+        </ScrollDown>
+      </FullPageContainer>
+      <FullPageContainer id="section-passione-ending" className="center">
+        <HeroContainerPassion className="white">
+          <div className="word__container">
+            <h1 className="word --f-w-regular --t-a-center">
+              P1 coming 01.25.2020
+            </h1>
+            {/* <h2 className="phonetics">/ˈpaSHən/</h2> */}
+          </div>
+        </HeroContainerPassion>
       </FullPageContainer>
     </Fragment>
   );

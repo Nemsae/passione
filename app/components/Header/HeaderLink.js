@@ -30,6 +30,6 @@ export default styled(Link)`
   }
   /* &:active {
     background: ${cssVars.CLR_PRIMARY};
-    color: #fff;
+    color: ${cssVars.CLR_WHITE};
   } */
 `;
