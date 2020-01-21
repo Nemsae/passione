@@ -64,6 +64,13 @@ const CoDrops = styled.div.attrs({
     overflow: hidden;
     z-index: 1;
     position: relative;
+
+    &.full-viewport {
+      /* height: 100vh;
+      width: 100vw;
+      max-height: 100vh;
+      max-width: 100vw; */
+    }
   }
 
   .content__img--full::after {
@@ -198,6 +205,14 @@ const CoDrops = styled.div.attrs({
     .content__img {
       width: calc(90% - 11rem);
       height: 60vh;
+
+      /* ! Hack - returning to previous state */
+      &.full-viewport {
+        height: calc(100vh + 20px);
+        width: calc(100vw + 20px);
+        max-height: calc(100vh + 20px);
+        max-width: calc(100vw + 20px);
+      }
     }
     .content__img--full {
       height: calc(100vh + 20px);

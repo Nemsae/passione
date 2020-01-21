@@ -21,16 +21,17 @@ import {
   makeSelectLoading,
   makeSelectError,
 } from 'containers/App/selectors';
-import greta1 from 'images/greta1.jpg';
 
 //  images/icons
 
 //  components
+import TextWithIcon from 'components/TextWithIcon';
 import H1 from 'components/H1';
 import H1Hero from 'components/H1Hero';
 import FullPageContainer from 'components/FullPageContainer';
 import ScrollDown from 'components/ScrollDown';
 import TextTrailEffect from 'components/TextTrailEffect';
+import IconUnderline from '../../icons/underline';
 import downArrowBlack from '../../images/down_arrow_black.png';
 // import messages from './messages';
 // import { changeUsername } from './actions';
@@ -72,9 +73,9 @@ const dataTextTrail = [
     text: 'Noct',
   },
   {
-    id: 'ethan',
-    name: 'Ethan',
-    text: 'Ethan',
+    id: 'kuro',
+    name: 'Kuro',
+    text: 'Kuro',
   },
   // {
   //   id: 'shogun',
@@ -194,8 +195,17 @@ export function HomePage({
             <p className="label">noun</p>
             <p className="definition">
               1. any powerful or compelling emotion or feeling, as{' '}
-              <span className="quote__image">love</span> or{' '}
-              <span className="quote__image">hate</span>.
+              <TextWithIcon className="underline bottom-sm">
+                love
+                <IconUnderline className="icon-underline" />
+              </TextWithIcon>{' '}
+              or{' '}
+              <TextWithIcon className="underline bottom-sm">
+                hate
+                <IconUnderline className="icon-underline" />
+              </TextWithIcon>.
+              {/* <span className="quote__image">love</span> or{' '}
+              <span className="quote__image">hate</span>. */}
             </p>
           </div>
         </HeroContainerPassion>
@@ -221,7 +231,11 @@ export function HomePage({
         <HeroContainerPassion className="white">
           <div className="word__container">
             <h1 className="word --f-w-regular --t-a-center">
-              P1 coming 01.25.2020
+              Passione N°1 coming{' '}
+              <TextWithIcon className="underline">
+                01.25.2020
+                <IconUnderline className="icon-underline" />
+              </TextWithIcon>
             </h1>
             {/* <h2 className="phonetics">/ˈpaSHən/</h2> */}
           </div>

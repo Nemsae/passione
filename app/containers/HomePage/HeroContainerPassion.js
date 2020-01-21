@@ -16,7 +16,7 @@ const HeroContainerPassion = styled.section.attrs({
     margin: 0;
 
     font-size: 2.4rem;
-    line-height: 1.75;
+    line-height: 1.55;
     font-family: ${cssVars.FONT_FAMILY_BODY};
     color: #4A4A4A;
   }

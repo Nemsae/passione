@@ -17,7 +17,7 @@ import Wrapper from './Wrapper';
 function Slides({ data }) {
   return data.map(({ id, name, text }) => (
     <div key={id} className={`content__slide content__slide--${id}`}>
-      <div className="content__img">
+      <div className="content__img full-viewport">
         <HeroImage className="content__img-inner" dataKey={id} />
       </div>
       <div className="content__text-wrap">
