@@ -24,14 +24,7 @@ const HeroButton = styled.button`
     color: ${cssVars.CLR_WHITE};
   }
 
-  ${H1Hero} {
-    font-size: 4rem;
-  }
-
   @media screen and (min-width: 53em) {
-    ${H1Hero} {
-      font-size: 10vh;
-    }
   }
 
   &:hover {
@@ -57,9 +50,9 @@ const HeroButton = styled.button`
       ${rgba(cssVars.CLR_WHITE, 0.6)} 100%
     ); */
 
-    ${H1Hero} {
+    /* ${H1Hero} {
       color: ${cssVars.CLR_PRIMARY};
-    }
+    } */
   }
 `;
 

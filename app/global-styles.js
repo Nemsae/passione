@@ -88,6 +88,10 @@ a:focus {
 	text-align: center;
 }
 
+.--lock-scroll {
+    overflow: hidden !important;
+  }
+
 @media screen and (min-width: 53em) {
 	:root {
 		font-size: 16px;

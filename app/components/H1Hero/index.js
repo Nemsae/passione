@@ -7,9 +7,9 @@ import cssVars from '../../cssVariables';
 const H1Hero = styled(H1).attrs({ className: 'h1 h1--hero' })`
   margin: 0;
 
-  font-size: 2em;
+  font-size: 4rem;
   font-family: ${cssVars.FONT_FAMILY_BODY};
-  
+
   font-weight: normal;
   text-transform: uppercase;
   letter-spacing: 6px;
@@ -20,36 +20,19 @@ const H1Hero = styled(H1).attrs({ className: 'h1 h1--hero' })`
   text-align: center;
   position: relative;
 
-    /* display:inline-block;
-  margin:50px;
-  background: radial-gradient(circle at var(--x,-40px) var(--y,-40px), #fff 20px,black 21px);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color:transparent;
-  -webkit-text-fill-color: transparent; */
+  transition: all 800ms ease-in-out;
 
-  /* &:before {
-    position: absolute;
-    content: attr(data-text);
-    color: ${cssVars.CLR_WHITE};
-    background: #000;
-    clip-path: circle(20px at var(--x, -40px) var(--y, -40px));
-  } */
+  .mobile-break {
 
-  /* sup.exponent {
-    font-size: 0.54em;
-
-    transition: all 800ms ease-in-out;
   }
 
-  &:hover {
-    sup.exponent {
-      vertical-align: initial;
-      font-size: 1em;
-    }
-  } */
+  @media screen and (min-width: 53em) {
+    font-size: 10vh;
 
-  transition: all 800ms ease-in-out;
+    .mobile-break {
+      display: none;
+    }
+  }
 `;
 
 export default H1Hero;

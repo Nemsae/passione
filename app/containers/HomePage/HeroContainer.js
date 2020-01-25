@@ -17,6 +17,8 @@ const HeroContainer = styled.article`
 
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
   &.white {
     background: ${cssVars.CLR_WHITE};

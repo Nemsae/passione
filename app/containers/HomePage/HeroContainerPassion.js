@@ -8,9 +8,7 @@ const HeroContainerPassion = styled.section.attrs({
 })`
   position: relative;
 
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
+  width: 100%;
 
   h1,
   h2,
@@ -38,6 +36,25 @@ const HeroContainerPassion = styled.section.attrs({
 
   p.label {
     font-style: italic;
+  }
+
+  #farewell-text {
+    /* text-align: left; */
+    font-size: 1.8rem;
+    line-height: 1.4;
+  }
+
+  .album-font {
+    /* padding: 8px 24px; */
+    padding: 0.2em 0.6em;
+    border: 3px solid ${cssVars.CLR_WHITE};
+    border-left: 0;
+    border-right: 0;
+
+    font-size: 1.5em;
+    line-height: 2.2;
+
+    text-transform: uppercase;
   }
 
   .definition__container {
@@ -78,8 +95,19 @@ const HeroContainerPassion = styled.section.attrs({
   }
 
   @media screen and (min-width: 53em) {
+    position: relative;
+    
+    width: 90%;
+
+    max-width: 1200px;
+    margin: 0 auto;
+    
     h1 {
       font-size: 9vh;
+      letter-spacing: 4px;
+    }
+    #farewell-text {
+      font-size: 7vh;
       letter-spacing: 4px;
     }
     h2 {
