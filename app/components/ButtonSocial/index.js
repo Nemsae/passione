@@ -23,6 +23,11 @@ const ButtonSocial = styled.a.attrs({
 
   color: ${cssVars.CLR_WHITE};
 
+  &.primary {
+    /* font-size: 3rem; */
+    font-size: 2.4rem;
+  }
+
   @media screen and (min-width: 53em) {
 
   }

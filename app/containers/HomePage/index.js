@@ -142,7 +142,7 @@ export function HomePage({
                 className={buttonClsName}
                 onClick={() => setWarningActive(false)}
               >
-                <H1>I understand</H1>
+                <H1 className="--f-f-arial">I understand</H1>
               </HeroButton>
             </WarningContainer>
           </ScrollLock>
@@ -280,7 +280,6 @@ export function HomePage({
                 <IconUnderline className="icon-underline" />
               </TextWithIcon>
             </h1>
-            {/* <h2 className="phonetics">/ˈpaSHən/</h2> */}
           </div>
         </HeroContainerPassion>
         <Footer />

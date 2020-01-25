@@ -15,6 +15,15 @@ const GlobalStyle = createGlobalStyle`
 }
 
 body {
+    
+  }
+
+  body.fontLoaded {
+    ${'' /* font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; */}
+    font-family: 'Libre Caslon Text', serif;
+  }
+
+body {
 	--color-text: #ff00c4;
 	--color-bg: #1c1423;
 	--color-link: #59545e;
@@ -24,10 +33,10 @@ body {
 	--font-trail-weight: 900;
 	--font-trail-size: 17vh;
 	--font-trail-lheight: 0.75;
-	--font-trail-family: 'Baskervville', serif; 
+	--font-trail-family: 'Montserrat Subrayada', sans-serif; 
 	color: var(--color-text);
 	background-color: var(--color-bg);
-	font-family: 'Baskervville', serif;
+	font-family: serif;
 	font-weight: 500;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -82,6 +91,9 @@ a:focus {
 
 .--f-w-regular {
 	font-weight: ${cssVars.FONT_WEIGHT_REGULAR};
+}
+.--f-f-arial {
+	font-family: Arial, Helvetica, sans-serif;
 }
 
 .--t-a-center {

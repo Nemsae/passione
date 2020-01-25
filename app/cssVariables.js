@@ -27,7 +27,8 @@ export default {
   //  roles
   CLR_PRIMARY: colors.babys_booties,
   CLR_SECONDARY: colors.cookies_and_cream,
-  CLR_TERTIARY: colors.deep_koamaru,
+  CLR_TERTIARY: colors.
+  deep_koamaru,
   //  band member colors
   CLR_BUNNY: '#f4d9dc',
 

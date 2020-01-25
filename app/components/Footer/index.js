@@ -12,21 +12,22 @@ function Footer() {
     <Wrapper>
       <ButtonSocial
         target="_blank"
-        href="https://www.instagram.com/passionephruit/"
-      >
-        ig
-      </ButtonSocial>
-      <ButtonSocial
-        target="_blank"
         href="https://www.facebook.com/Passionephruit/"
       >
-        fb
+        <i className="fab fa-facebook" />
+      </ButtonSocial>
+      <ButtonSocial
+        className="primary"
+        target="_blank"
+        href="https://www.instagram.com/passionephruit/"
+      >
+        <i className="fab fa-instagram" />
       </ButtonSocial>
       <ButtonSocial
         target="_blank"
         href="https://www.twitter.com/Passionephruit/"
       >
-        tw
+        <i className="fab fa-twitter" />
       </ButtonSocial>
       {/* <section>
         <FormattedMessage {...messages.licenseMessage} />

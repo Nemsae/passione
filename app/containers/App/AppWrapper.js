@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
-import bgBlack from '../../images/bg_black.jpg';
+// import bgBlack from '../../images/bg_black.jpg';
+import bgBlack from '../../images/bg_black.png';
 import cssVars from '../../cssVariables';
 
 export const AppWrapper = styled.div`

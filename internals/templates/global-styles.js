@@ -8,11 +8,12 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: serif;
   }
 
   body.fontLoaded {
-    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    ${'' /* font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; */}
+    font-family: 'Libre Caslon Text', serif;
   }
 
   #app {

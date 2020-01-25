@@ -32,12 +32,12 @@ import configureStore from './configureStore';
 // Import i18n messages
 import { translationMessages } from './i18n';
 
-// Observe loading of Open Sans (to remove open sans, remove the <link> tag in
+// Observe loading of Libre Caslon Text (to remove open sans, remove the <link> tag in
 // the index.html file and this observer)
-const openSansObserver = new FontFaceObserver('Open Sans', {});
+const libreCaslonTextObserver = new FontFaceObserver('Libre Caslon Text', {});
 
-// When Open Sans is loaded, add a font-family using Open Sans to the body
-openSansObserver.load().then(() => {
+// When Libre Caslon Text is loaded, add a font-family using Libre Caslon Text to the body
+libreCaslonTextObserver.load().then(() => {
   document.body.classList.add('fontLoaded');
 });
 

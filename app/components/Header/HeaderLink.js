@@ -15,7 +15,7 @@ export default styled(Link)`
   outline: 0;
 
   text-decoration: none;
-  font-family: 'Baskervville', serif;
+  font-family: 'Montserrat Subrayada', serif;
   font-weight: bold;
   font-size: 16px;
 
