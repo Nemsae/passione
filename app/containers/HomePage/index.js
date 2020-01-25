@@ -11,6 +11,7 @@ import { Helmet } from 'react-helmet';
 import { FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
+import { Parallax, ParallaxLayer } from 'react-spring/renderprops-addons';
 import { createStructuredSelector } from 'reselect';
 import ScrollLock from 'react-scrolllock';
 import classNames from 'classnames';
@@ -61,33 +62,7 @@ import { setWarningActive } from './actions';
 import { selectWarningActive } from './selectors';
 
 const key = 'home';
-const dataTextTrail = [
-  {
-    id: 'bunny',
-    name: 'Bunny',
-    text: 'Bunny',
-  },
-  {
-    id: 'jean',
-    name: 'Jean',
-    text: 'Jean',
-  },
-  {
-    id: 'noct',
-    name: 'Noct',
-    text: 'Noct',
-  },
-  {
-    id: 'kuro',
-    name: 'Kuro',
-    text: 'Kuro',
-  },
-  // {
-  //   id: 'shogun',
-  //   name: 'Shogun',
-  //   text: 'Shogun',
-  // },
-];
+
 
 export function HomePage({
   warningActive,
@@ -134,8 +109,8 @@ export function HomePage({
           <ScrollLock>
             <WarningContainer className="--lock-scroll">
               <p>
-                WARNING: This product contains passione. Passione is an addictive
-                chemical.
+                WARNING: This product contains passione. Passione is an
+                addictive chemical.
               </p>
               <WarningClose onClick={() => setWarningActive(false)} />
               <HeroButton
@@ -259,14 +234,14 @@ export function HomePage({
         </ScrollDown>
       </FullPageContainer>
       <FullPageContainer id="section-passione-members" className="center white">
-        <TextTrailEffect data={dataTextTrail} />
-        <ScrollDown>
+        <TextTrailEffect />
+        {/* <ScrollDown>
           <img
             className="icon icon--image"
             src={downArrowBlack}
             alt="scroll down"
           />
-        </ScrollDown>
+        </ScrollDown> */}
       </FullPageContainer>
       <FullPageContainer id="section-passione-ending" className="center">
         <HeroContainerPassion className="white">

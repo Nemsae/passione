@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { rgba } from 'polished';
 
 import cssVars from '../../cssVariables';
 
@@ -147,10 +148,13 @@ const CoDrops = styled.div.attrs({
     width: 100%;
     max-width: 1200px;
 
-    height: auto;
+    /* height: auto; */
+    height: 100%;
     display: flex;
+    /* align-items: flex-end;
+    justify-content: center; */
     align-items: flex-end;
-    justify-content: center;
+    justify-content: space-between;
     font-size: 1.25rem;
     /* position: relative;
     z-index: 1; */
@@ -163,6 +167,15 @@ const CoDrops = styled.div.attrs({
 
     .content__nav-button + .content__nav-button {
       margin-left: 1rem;
+    }
+
+    .content__nav-button--prev {
+      align-self: flex-start;
+      transform: translateY(-50%);
+    }
+    .content__nav-button--next {
+      align-self: flex-end;
+      transform: translateY(50%);
     }
   }
 
@@ -202,6 +215,8 @@ const CoDrops = styled.div.attrs({
   @media screen and (min-width: 53em) {
     height: 100vh;
 
+    box-shadow: ${rgba(cssVars.CLR_WHITE, 0.4)} 0px 12px 24px 0px;
+
     .content__img {
       width: calc(90% - 11rem);
       height: 60vh;
@@ -224,6 +239,7 @@ const CoDrops = styled.div.attrs({
       font-size: ${cssVars.FONT_TRAIL_SIZE};
     }
     .content__nav {
+      height: auto;
       align-self: center;
       align-items: center;
       justify-content: space-between;
@@ -232,6 +248,15 @@ const CoDrops = styled.div.attrs({
 
       .content__nav-button + .content__nav-button {
         margin-left: 0rem;
+      }
+
+      .content__nav-button--prev {
+        align-self: center;
+        transform: translateY(0%);
+      }
+      .content__nav-button--next {
+        align-self: center;
+        transform: translateY(0%);
       }
     }
   }

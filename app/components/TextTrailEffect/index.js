@@ -74,6 +74,34 @@ function Slides({ data }) {
   ));
 }
 
+const dataTextTrail = [
+  {
+    id: 'bunny',
+    name: 'Bunny',
+    text: 'Bunny',
+  },
+  {
+    id: 'jean',
+    name: 'Jean',
+    text: 'Jean',
+  },
+  {
+    id: 'noct',
+    name: 'Noct',
+    text: 'Noct',
+  },
+  {
+    id: 'kuro',
+    name: 'Kuro',
+    text: 'Kuro',
+  },
+  // {
+  //   id: 'shogun',
+  //   name: 'Shogun',
+  //   text: 'Shogun',
+  // },
+];
+
 /**
  * This will run the code needed to initialize the slide show
  * @param {*} param
@@ -87,7 +115,7 @@ function TextTrailEffect({ data, ...restProps }) {
 
   return (
     <CoDrops className="content">
-      <Slides data={data} />
+      <Slides data={dataTextTrail} />
       <nav className="content__nav">
         <button
           type="button"
