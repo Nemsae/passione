@@ -123,7 +123,7 @@ export class HomePage extends React.PureComponent {
           <title>We are Passione</title>
           <meta name="We are Passione" content="Make You Feel" />
         </Helmet>
-        <HeroContainer id={'landing-container'}>
+        <HeroContainer id="landing-container">
           {/* <HeroBGImage className={heroImageClsName} /> */}
           {warningActive && (
             <ScrollLock>

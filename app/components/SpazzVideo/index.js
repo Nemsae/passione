@@ -30,16 +30,23 @@ const SpazzVideo = styled.span`
 
   &#video-1 {
     @media screen and (min-width: 53em) {
-      top: 13%;
-      left: 13%;
+      top: 23%;
+      left: 33%;
+      video {
+        max-width: 400px;
+      }
     }
   }
 
   &#video-2 {
-    max-height: 400px;
     @media screen and (min-width: 53em) {
       bottom: 13%;
       right: 13%;
+
+      video {
+        max-height: 480px;
+        max-width: 100%;
+      }
     }
   }
 
