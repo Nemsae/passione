@@ -32,7 +32,8 @@ export default {
   //  band member colors
   CLR_BUNNY: '#f4d9dc',
 
-  CLR_APP_BG: '#131210',
+  // CLR_APP_BG: '#131210',
+  CLR_APP_BG: '#000',
 
   //  header
   HEADER_Z_INDEX: 999,

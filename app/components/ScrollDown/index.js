@@ -26,6 +26,20 @@ const ScrollDown = styled.button`
   .icon--image {
     max-height: 100px;
   }
+
+  &.chibi {
+    bottom: 0;
+    img {
+      z-index: 1;
+      max-height: 330px;
+
+      filter: invert(1);
+
+      @media screen and (min-width: 53em) {
+        max-height: 430px;
+      }
+    }
+  }
 `;
 
 export default ScrollDown;

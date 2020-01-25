@@ -8,6 +8,7 @@ import greta3 from '../../images/greta3.jpg';
 import john2 from '../../images/john2.jpg';
 import jahan2 from '../../images/jahan2.jpg';
 import ethan1 from '../../images/ethan1.jpg';
+import shogun3 from '../../images/shogun_3_rotate.jpg';
 
 const getImageURL = dataKey => {
   let backgroundURL;
@@ -23,6 +24,9 @@ const getImageURL = dataKey => {
       break;
     case 'kuro':
       backgroundURL = ethan1;
+      break;
+    case 'shogun':
+      backgroundURL = shogun3;
       break;
     default:
       break;

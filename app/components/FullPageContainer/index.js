@@ -22,6 +22,14 @@ const FullPageContainer = styled.article`
   &.white {
     background-color: ${cssVars.CLR_WHITE};
   }
+
+  &.white-mobile {
+    background-color: ${cssVars.CLR_WHITE};
+    
+    @media screen and (min-width: 53em) {
+      background-color: none;
+    }
+  }
 `;
 
 export default FullPageContainer;

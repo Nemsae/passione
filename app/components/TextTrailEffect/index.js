@@ -95,11 +95,11 @@ const dataTextTrail = [
     name: 'Kuro',
     text: 'Kuro',
   },
-  // {
-  //   id: 'shogun',
-  //   name: 'Shogun',
-  //   text: 'Shogun',
-  // },
+  {
+    id: 'shogun',
+    name: 'Shogun',
+    text: 'Shogun',
+  },
 ];
 
 /**

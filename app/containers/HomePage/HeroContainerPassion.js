@@ -10,6 +10,10 @@ const HeroContainerPassion = styled.section.attrs({
 
   width: 100%;
 
+  &.white {
+    color: ${cssVars.CLR_WHITE};
+  }
+
   h1,
   h2,
   p {

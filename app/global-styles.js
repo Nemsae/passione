@@ -100,6 +100,16 @@ a:focus {
 	text-align: center;
 }
 
+.--z-i-0 {
+	z-index: 0;
+}
+.--z-i-1 {
+	z-index: 1;
+}
+.--z-i-2 {
+	z-index: 2;
+}
+
 .--lock-scroll {
     overflow: hidden !important;
   }
