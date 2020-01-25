@@ -1,14 +1,12 @@
 import styled from 'styled-components';
 
-import greta1 from 'images/greta1.jpg';
-
 const HeroBGImage = styled.div.attrs({
   className: 'hero-bg-image',
 })`
   position: absolute;
 
   /* The image used */
-  background-image: url(${greta1});
+  /* background-image: url(${greta1}); */
 
   /* Full height */
   height: 100%;

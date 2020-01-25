@@ -1,7 +1,5 @@
 import styled from 'styled-components';
 
-import greta1 from 'images/greta1.jpg';
-
 import H1 from 'components/H1';
 import cssVars from '../../cssVariables';
 
@@ -32,8 +30,6 @@ const HeroContainer = styled.article`
       color: #000;
     } */
   }
-
-  /* background-image: url(${greta1}); */
 `;
 
 export default HeroContainer;

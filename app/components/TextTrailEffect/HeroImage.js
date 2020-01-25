@@ -2,12 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-// import greta1 from 'images/greta1.jpg';
-import greta3 from 'images/greta3.jpg';
-// import john1 from 'images/john1.jpg';
-import john2 from 'images/john2.jpg';
-import jahan2 from 'images/jahan2.jpg';
-import ethan1 from 'images/ethan1.jpg';
+// import greta1 from '../../images/greta1.jpg';
+import greta3 from '../../images/greta3.jpg';
+// import john1 from '../../images/john1.jpg';
+import john2 from '../../images/john2.jpg';
+import jahan2 from '../../images/jahan2.jpg';
+import ethan1 from '../../images/ethan1.jpg';
 
 const getImageURL = dataKey => {
   let backgroundURL;

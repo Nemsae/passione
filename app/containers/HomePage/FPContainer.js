@@ -1,7 +1,5 @@
 import styled from 'styled-components';
 
-// import greta1 from 'images/greta1.jpg';
-
 import H1 from 'components/H1';
 import cssVars from '../../cssVariables';
 
