@@ -29,6 +29,9 @@ import {
 
 //  images/icons
 
+//  utils
+import { scrollIntoViewById } from 'utils/window';
+
 //  components
 import Footer from 'components/Footer';
 import TextWithIcon from 'components/TextWithIcon';
@@ -93,12 +96,6 @@ export class HomePage extends React.PureComponent {
     }));
   };
 
-  scrollIntoViewById(id) {
-    document.getElementById(id).scrollIntoView({
-      behavior: 'smooth',
-    });
-  }
-
   render() {
     const { warningActive } = this.props;
     // const { warningActive, setWarningActive } = this.props;
@@ -126,7 +123,7 @@ export class HomePage extends React.PureComponent {
           <title>We are Passione</title>
           <meta name="We are Passione" content="Make You Feel" />
         </Helmet>
-        <HeroContainer>
+        <HeroContainer id={'landing-container'}>
           {/* <HeroBGImage className={heroImageClsName} /> */}
           {warningActive && (
             <ScrollLock>
@@ -152,7 +149,7 @@ export class HomePage extends React.PureComponent {
               // as={Link}
               // to="/fam"
               className={buttonClsName}
-              onClick={() => this.scrollIntoViewById('section-passion-def')}
+              onClick={() => scrollIntoViewById('section-passion-def')}
               // onMouseEnter={() => setHeroBGImageActive(true)}
               // onFocus={() => setHeroBGImageActive(true)}
               // onClick={() => setHeroBGImageActive(true)}
@@ -222,7 +219,7 @@ export class HomePage extends React.PureComponent {
           </HeroContainerPassion>
           <ScrollDown
             className="chibi"
-            onClick={() => this.scrollIntoViewById('section-passione-members')}
+            onClick={() => scrollIntoViewById('section-passione-members')}
           >
             <img className="icon icon--image" src={chibi} alt="scroll down" />
           </ScrollDown>
