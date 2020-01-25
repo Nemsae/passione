@@ -30,7 +30,10 @@ import H1 from 'components/H1';
 import H1Hero from 'components/H1Hero';
 import FullPageContainer from 'components/FullPageContainer';
 import ScrollDown from 'components/ScrollDown';
+import SpazzVideo from 'components/SpazzVideo';
 import TextTrailEffect from 'components/TextTrailEffect';
+import videoTony1 from '../../images/tony-1.mp4';
+import videoPSGlitch from '../../images/ps_video_glitch.mp4';
 import IconUnderline from '../../icons/underline';
 import downArrowBlack from '../../images/down_arrow_black.png';
 // import messages from './messages';
@@ -94,6 +97,8 @@ export function HomePage({
   useInjectSaga({ key, saga });
 
   const [heroImageActive, setHeroBGImageActive] = useState(false);
+  const [video1Active, setVideo1Active] = useState(false);
+  const [video2Active, setVideo2Active] = useState(false);
   // const [warningActive, setWarningActive] = useState(true);
 
   // useEffect(() => {
@@ -119,7 +124,7 @@ export function HomePage({
     <Fragment>
       <Helmet>
         <title>We are Passione</title>
-        <meta name="We are Passione" content="The Vision of Passione" />
+        <meta name="We are Passione" content="Make You Feel" />
       </Helmet>
       <HeroContainer>
         {/* <HeroBGImage className={heroImageClsName} /> */}
@@ -182,6 +187,23 @@ export function HomePage({
         </ScrollDown>
       </HeroContainer>
       <FullPageContainer id="section-passion-def" className="center">
+        {video1Active && (
+          <SpazzVideo
+            id="video-1"
+            // className={video1Active ? 'active' : 'inactive'}
+            className={true ? 'active' : 'inactive'}
+          >
+            <video muted src={videoTony1} autoPlay />
+          </SpazzVideo>
+        )}
+        {video2Active && (
+          <SpazzVideo
+            id="video-2"
+            className={video2Active ? 'active' : 'inactive'}
+          >
+            <video muted src={videoPSGlitch} autoPlay />
+          </SpazzVideo>
+        )}
         <HeroContainerPassion className="white">
           <div className="word__container">
             {/* <div className="word__scroller">
@@ -195,15 +217,26 @@ export function HomePage({
             <p className="label">noun</p>
             <p className="definition">
               1. any powerful or compelling emotion or feeling, as{' '}
-              <TextWithIcon className="underline bottom-sm">
+              <TextWithIcon
+                className="underline bottom-sm"
+                onMouseEnter={() => setVideo1Active(true)}
+                onClick={() => setVideo1Active(true)}
+                onMouseLeave={() => setVideo1Active(false)}
+              >
                 love
                 <IconUnderline className="icon-underline" />
               </TextWithIcon>{' '}
               or{' '}
-              <TextWithIcon className="underline bottom-sm">
+              <TextWithIcon
+                className="underline bottom-sm"
+                onMouseEnter={() => setVideo2Active(true)}
+                onClick={() => setVideo2Active(true)}
+                onMouseLeave={() => setVideo2Active(false)}
+              >
                 hate
                 <IconUnderline className="icon-underline" />
-              </TextWithIcon>.
+              </TextWithIcon>
+              .
               {/* <span className="quote__image">love</span> or{' '}
               <span className="quote__image">hate</span>. */}
             </p>

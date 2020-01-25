@@ -6,6 +6,8 @@ import cssVars from '../../cssVariables';
 const HeroContainerPassion = styled.section.attrs({
   className: 'hero-container hero-container--passion',
 })`
+  position: relative;
+
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;

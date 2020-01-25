@@ -7,7 +7,7 @@ import cssVars from '../../cssVariables';
 const WarningContainer = styled.section.attrs({
   className: 'warning__container',
 })`
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
