@@ -15,6 +15,10 @@ const FullPageContainer = styled.article`
     justify-content: center;
   }
 
+  &.padding {
+    padding: 0 1.5em;
+  }
+
   &.white {
     background-color: ${cssVars.CLR_WHITE};
   }

@@ -253,10 +253,12 @@ const CoDrops = styled.div.attrs({
       .content__nav-button--prev {
         align-self: center;
         transform: translateY(0%);
+        filter: invert(1);
       }
       .content__nav-button--next {
         align-self: center;
         transform: translateY(0%);
+        filter: invert(1);
       }
     }
   }

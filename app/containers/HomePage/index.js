@@ -169,7 +169,7 @@ export function HomePage({
           />
         </ScrollDown>
       </HeroContainer>
-      <FullPageContainer id="section-passion-def" className="center">
+      <FullPageContainer id="section-passion-def" className="center padding">
         {video1Active && (
           <SpazzVideo
             id="video-1"

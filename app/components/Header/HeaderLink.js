@@ -5,7 +5,7 @@ import cssVars from '../../cssVariables';
 
 export default styled(Link)`
   display: inline-flex;
-  padding: 0.25em 2em;
+  /* padding: 0.25em 2em; */
   margin: 1em;
 
   -webkit-font-smoothing: antialiased;
